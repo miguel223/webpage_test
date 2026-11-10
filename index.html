@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>omegadata | AI Products for Industry, Insurance and Services</title>
+  <meta name="description" content="omegadata builds AI products for industry, insurance and services, including an AI car claim adjuster and AI voice assistants.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="omegadata">
+  <meta property="og:title" content="omegadata | AI Products for Industry, Insurance and Services">
+  <meta property="og:description" content="AI products for industry, insurance and services, including an AI car claim adjuster and AI voice assistants.">
+  <meta property="og:url" content="https://omegadata-ai.com">
+  <meta name="twitter:card" content="summary">
+
+  <style>
+    :root {
+      --bg: #070b16;
+      --surface: #0f1629;
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #e8ecf5;
+      --muted: #9aa4bf;
+      --accent: #6d7cff;
+      --accent-2: #22d3ee;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: var(--bg); line-height: 1.65; }
+    a { color: inherit; text-decoration: none; }
+
+    nav { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; background: rgba(7, 11, 22, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .logo { font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em; }
+    .logo span { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    nav ul { display: flex; gap: 1.5rem; list-style: none; font-size: 0.95rem; color: var(--muted); }
+    nav ul a:hover { color: var(--text); }
+
+    .hero { position: relative; overflow: hidden; text-align: center; padding: 7rem 1.5rem 6rem; background: radial-gradient(ellipse at 50% 0%, rgba(109, 124, 255, 0.25), transparent 60%), radial-gradient(ellipse at 80% 40%, rgba(34, 211, 238, 0.12), transparent 50%); }
+    .badge { display: inline-block; padding: 0.35rem 0.9rem; border: 1px solid var(--border); border-radius: 999px; font-size: 0.85rem; color: var(--muted); background: rgba(255, 255, 255, 0.03); margin-bottom: 1.5rem; }
+    .hero h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.1; letter-spacing: -0.03em; max-width: 880px; margin: 0 auto 1.25rem; }
+    .gradient { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero p { font-size: 1.15rem; color: var(--muted); max-width: 620px; margin: 0 auto 2rem; }
+    .btn { display: inline-block; padding: 0.8rem 1.6rem; border-radius: 10px; font-weight: 600; transition: transform 0.15s, box-shadow 0.15s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: #05070f; box-shadow: 0 8px 30px rgba(109, 124, 255, 0.35); }
+    .btn-ghost { border: 1px solid var(--border); margin-left: 0.75rem; background: rgba(255, 255, 255, 0.03); }
+
+    main { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
+    section { padding: 4.5rem 0; }
+    .eyebrow { color: var(--accent-2); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .lead { color: var(--muted); font-size: 1.1rem; max-width: 720px; }
+
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; transition: transform 0.2s, border-color 0.2s; }
+    .card:hover { transform: translateY(-4px); border-color: rgba(109, 124, 255, 0.5); }
+    .icon { width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center; margin-bottom: 1.25rem; background: linear-gradient(135deg, rgba(109, 124, 255, 0.25), rgba(34, 211, 238, 0.2)); }
+    .icon svg { width: 24px; height: 24px; stroke: var(--text); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .card h3 { font-size: 1.25rem; margin-bottom: 0.6rem; }
+    .card p { color: var(--muted); }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; }
+    .tags span { font-size: 0.8rem; padding: 0.25rem 0.7rem; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); }
+
+    .founder { display: flex; gap: 1.75rem; align-items: center; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; margin-top: 2.5rem; }
+    .avatar { flex: none; width: 84px; height: 84px; border-radius: 50%; display: grid; place-items: center; font-size: 1.8rem; font-weight: 700; color: #05070f; background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+    .founder h3 { font-size: 1.3rem; }
+    .founder .role { color: var(--accent-2); font-size: 0.9rem; margin-bottom: 0.5rem; }
+    .founder p { color: var(--muted); }
+    .founder a.link { display: inline-block; margin-top: 0.75rem; color: var(--accent); font-weight: 600; }
+    .founder a.link:hover { text-decoration: underline; }
+
+    .cta { text-align: center; padding: 4rem 2rem; border-radius: 20px; border: 1px solid var(--border); background: radial-gradient(ellipse at 50% 0%, rgba(109, 124, 255, 0.2), transparent 70%), var(--surface); }
+    .cta p { color: var(--muted); max-width: 540px; margin: 0 auto 2rem; }
+
+    footer { text-align: center; padding: 2.5rem 1.5rem; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--border); margin-top: 4rem; }
+
+    @media (max-width: 640px) {
+      nav ul { gap: 1rem; font-size: 0.85rem; }
+      .btn-ghost { margin: 0.75rem 0 0; }
+      .founder { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="logo" href="#top"><span>omega</span>data</a>
+    <ul>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#founder">Founder</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="badge">AI for industry, insurance and services</div>
+    <h1>AI products that put <span class="gradient">intelligent agents</span> to work for your business</h1>
+    <p>omegadata designs and builds AI products that help businesses work faster and more accurately.</p>
+    <a class="btn btn-primary" href="#products">Explore products</a>
+    <a class="btn btn-ghost" href="#contact">Get in touch</a>
+  </header>
+
+  <main>
+    <section id="products">
+      <div class="eyebrow">Products</div>
+      <h2>Built for real business workflows</h2>
+      <p class="lead">Practical AI agents designed to support your teams in insurance, sales and customer service.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M5 17h14M5 17a2 2 0 1 0 4 0M15 17a2 2 0 1 0 4 0M3 13l2-6a2 2 0 0 1 2-1.5h10A2 2 0 0 1 19 7l2 6v4H3z"/></svg>
+          </div>
+          <h3>AI Car Adjuster</h3>
+          <p>An AI agent that supports claim adjusters on car accident cases by helping determine fault allocation.</p>
+          <div class="tags"><span>Insurance</span><span>Claims</span><span>Fault allocation</span></div>
+        </div>
+        <div class="card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+          </div>
+          <h3>AI Voice Assistants</h3>
+          <p>AI voice assistants for sales, debt recovery and customer attention.</p>
+          <div class="tags"><span>Sales</span><span>Debt recovery</span><span>Customer service</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="founder">
+      <div class="eyebrow">Founder</div>
+      <h2>Meet the founder</h2>
+      <div class="founder">
+        <div class="avatar">MF</div>
+        <div>
+          <h3>Miguel Angel Ferrara</h3>
+          <div class="role">Founder, omegadata</div>
+          <p>Miguel builds AI products for industry, insurance and services, from AI agents that support claim adjusters to voice assistants for sales, debt recovery and customer attention.</p>
+          <a class="link" href="https://www.linkedin.com/in/miguel-angel-ferrara-16a1b8134/" target="_blank" rel="noopener">View LinkedIn profile &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="cta">
+        <h2>Let's build something together</h2>
+        <p>Tell us about your use case and we'll show you how AI can help your team.</p>
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/miguel-angel-ferrara-16a1b8134/" target="_blank" rel="noopener">Contact us on LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 omegadata. All rights reserved.
+  </footer>
+</body>
+</html>
